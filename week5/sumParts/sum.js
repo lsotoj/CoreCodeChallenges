@@ -1,12 +1,12 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.partsSums = void 0;
 function partsSums(ls) {
     console.log(ls);
-    var sum = ls.reduce(function (sum, current) { return sum + current; }, 0);
-    var arr = [];
+    let sum = ls.reduce((sum, current) => sum + current, 0);
+    let arr = [];
     arr.push(sum);
-    for (var i = 1; i <= ls.length; i++) {
+    for (let i = 1; i <= ls.length; i++) {
         sum -= ls[i - 1];
         arr.push(sum);
     }

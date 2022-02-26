@@ -1,8 +1,9 @@
-var digPow = function (n, p) {
+"use strict";
+const digPow = (n, p) => {
     // your code
-    var arr = n.toString().split("");
-    var top;
-    top = arr.reduce(function (sum, current, index) {
+    let arr = n.toString().split("");
+    let top;
+    top = arr.reduce((sum, current, index) => {
         return sum + Math.pow(parseInt(current), p++);
     }, 0);
     if (top === n)

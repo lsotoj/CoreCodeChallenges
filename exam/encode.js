@@ -1,11 +1,12 @@
+"use strict";
 function encode(plainText) {
     // Write your code here
     // To debug: console.error('Debug messages...');
-    var arr = plainText.split("");
-    var result = "";
-    for (var i = 0; i < arr.length; i++) {
-        var element = arr[i];
-        var count = 1;
+    let arr = plainText.split("");
+    let result = "";
+    for (let i = 0; i < arr.length; i++) {
+        let element = arr[i];
+        let count = 1;
         while (element === arr[i + 1]) {
             count++;
             i++;

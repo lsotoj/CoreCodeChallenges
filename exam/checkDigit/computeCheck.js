@@ -1,13 +1,14 @@
+"use strict";
 function check(identificationNumber) {
     // Write your code here
     // To debug: console.error('Debug messages...');
-    var arr = identificationNumber.split("");
-    var sum = 3 * arr.reduce(function (sum, current, index) {
+    let arr = identificationNumber.split("");
+    let sum = 3 * arr.reduce((sum, current, index) => {
         if (index % 2 === 0)
             return sum + parseInt(current);
         return sum;
     }, 0);
-    var sum2 = (sum + arr.reduce(function (sum, current, index) {
+    let sum2 = (sum + arr.reduce((sum, current, index) => {
         if ((index % 2) !== 0)
             return sum + parseInt(current);
         return sum;
