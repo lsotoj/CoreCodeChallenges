@@ -1,10 +1,11 @@
+"use strict";
 function translate(text) {
     // Write your code here
     // To debug: console.error('Debug messages...');
-    var arr = text.split("");
-    var result = [];
-    var regex = /[aeiou]/;
-    for (var i = 0; i < arr.length; i++) {
+    let arr = text.split("");
+    let result = [];
+    let regex = /[aeiou]/;
+    for (let i = 0; i < arr.length; i++) {
         if (i === arr.length - 1 && regex.test(arr[i]))
             result.push("av");
         if (regex.test(arr[i]) && !regex.test(arr[i + 1]))

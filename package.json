@@ -1,0 +1,21 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "These are my challenges through my path in the Core Code Bootcamp.",
+  "main": "p.js",
+  "scripts": {
+    "start": "nodemon week5/tile/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsotoj/CoreCodeChallenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsotoj/CoreCodeChallenges/issues"
+  },
+  "homepage": "https://github.com/lsotoj/CoreCodeChallenges#readme"
+}

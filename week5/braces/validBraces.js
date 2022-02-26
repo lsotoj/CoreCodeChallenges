@@ -1,11 +1,11 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.validBraces = void 0;
 function validBraces(braces) {
-    var arr = braces.split("");
-    var count = 0;
-    var flag = false;
-    for (var i = 0; i < arr.length; i++) {
+    const arr = braces.split("");
+    let count = 0;
+    let flag = false;
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] === ")") {
             count--;
             if (arr[i - 1] === "(")

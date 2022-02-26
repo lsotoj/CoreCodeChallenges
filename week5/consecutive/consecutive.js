@@ -1,14 +1,14 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.longestConsec = void 0;
 function longestConsec(strarr, k) {
     if (k === 1)
-        strarr.sort(function (a, b) { return b.length - a.length; })[0];
-    var newArr = [];
-    for (var i = 0; i < strarr.length - 1; i++) {
+        strarr.sort((a, b) => b.length - a.length)[0];
+    let newArr = [];
+    for (let i = 0; i < strarr.length - 1; i++) {
         newArr.push(strarr.slice(i, i + k).join(""));
     }
-    newArr = newArr.sort(function (a, b) { return b.length - a.length; });
+    newArr = newArr.sort((a, b) => b.length - a.length);
     console.log(newArr);
     return newArr[0];
 }
