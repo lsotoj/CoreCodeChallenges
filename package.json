@@ -4,7 +4,7 @@
   "description": "These are my challenges through my path in the Core Code Bootcamp.",
   "main": "p.js",
   "scripts": {
-    "start": "nodemon week5/tile/app.js",
+    "start": "nodemon week5/time/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
