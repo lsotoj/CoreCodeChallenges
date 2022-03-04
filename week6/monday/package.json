@@ -1,0 +1,16 @@
+{
+  "name": "monday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "enquirer": "^2.3.6"
+  }
+}

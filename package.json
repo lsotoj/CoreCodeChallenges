@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/lsotoj/CoreCodeChallenges/issues"
   },
-  "homepage": "https://github.com/lsotoj/CoreCodeChallenges#readme"
+  "homepage": "https://github.com/lsotoj/CoreCodeChallenges#readme",
+  "dependencies": {
+    "@types/uuid": "^8.3.4",
+    "enquirer": "^2.3.6",
+    "uuid": "^8.3.2"
+  }
 }
