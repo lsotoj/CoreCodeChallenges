@@ -15,6 +15,9 @@ class Main {
     start() {
         return __awaiter(this, void 0, void 0, function* () {
             const menu = new Menu_1.Menu();
+            menu.fillMainMenu();
+            menu.fillOptions();
+            menu.fillSubMenus();
             yield menu.showMainMenu();
         });
     }
