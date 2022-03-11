@@ -78,7 +78,27 @@ class Main {
                 return { option: index, message: movie.name };
             });
             let movieToIncrement = yield Input_1.Input.getSelect("Select Te Action Movie", selectChoises);
-            console.log(this.storage.filter(movie => (movie.name === selectChoises[movieToIncrement.data].message)));
+            this.storage.forEach((movie, index) => {
+                if (movie.name === selectChoises[movieToIncrement.data].message) {
+                    if (movie instanceof ActionMovie_1.ActionMovie)
+                        movie.incrementExplosions();
+                }
+            });
+        });
+    }
+    incrementJump() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let scareMovies = this.storage.filter(movie => (movie instanceof HorrorMovie_1.HorrorMovie));
+            let selectChoises = scareMovies.map((movie, index) => {
+                return { option: index, message: movie.name };
+            });
+            let movieToIncrement = yield Input_1.Input.getSelect("Select Te Action Movie", selectChoises);
+            this.storage.forEach((movie, index) => {
+                if (movie.name === selectChoises[movieToIncrement.data].message) {
+                    if (movie instanceof ActionMovie_1.ActionMovie)
+                        movie.incrementExplosions();
+                }
+            });
         });
     }
     start() {
@@ -100,6 +120,9 @@ class Main {
                         break;
                     case 5:
                         yield this.incrementExplosions();
+                        break;
+                    case 6:
+                        yield this.incrementJump();
                         break;
                 }
                 input = yield Input_1.Input.getSelect("Blockbuster...", this.choices);

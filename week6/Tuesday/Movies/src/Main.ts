@@ -90,10 +90,31 @@ export class Main {
         let selectChoises: SelectChoice[] = actionMovies.map( (movie, index) => {
             return { option: index, message: movie.name}
         } )
+
         let movieToIncrement = await Input.getSelect( "Select Te Action Movie", selectChoises);
 
-        console.log(this.storage.filter( movie => (movie.name === selectChoises[movieToIncrement.data].message)) )
+        this.storage.forEach( (movie, index) => {
+            if(movie.name === selectChoises[movieToIncrement.data].message) {
+                if(movie instanceof ActionMovie) movie.incrementExplosions(); 
+            }     
+        });
     }
+
+    private async incrementJump() {
+        let scareMovies: Movie[] = this.storage.filter( movie => (movie instanceof HorrorMovie));
+        let selectChoises: SelectChoice[] = scareMovies.map( (movie, index) => {
+            return { option: index, message: movie.name}
+        } )
+
+        let movieToIncrement = await Input.getSelect( "Select Te Action Movie", selectChoises); 
+
+        this.storage.forEach( (movie, index) => {
+            if(movie.name === selectChoises[movieToIncrement.data].message) {
+                if(movie instanceof ActionMovie) movie.incrementExplosions(); 
+            }     
+        });
+    }
+
     async start() {
         let input = await Input.getSelect( "Blockbuster...", this.choices)
         while(input.data !== 7) {
@@ -112,6 +133,9 @@ export class Main {
                     break;
                 case 5: 
                     await this.incrementExplosions();
+                    break;
+                case 6:
+                    await this.incrementJump();
                     break;
             }
 
